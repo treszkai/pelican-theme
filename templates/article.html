@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
 <meta name="keywords" content="{{ article.tags|join(', ')  }}">
+{% if (article.latex is defined and article.latex) or article.latex_macros is defined %}{% include 'katex.html' %}{% endif %}
 {% endblock %}
 
 {% block title %}&ndash; {{ article.title }}{% endblock %}

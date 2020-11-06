@@ -50,11 +50,10 @@
         <a href="{{ SITEURL }}">{{ SITENAME }}</a>
       </div>
       <p>
-      {% if ARCHIVES_URL %}
-        <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}"><i class="fas fa-archive"></i> Archive</a>
-      {% else %}
-        <a href="{{ SITEURL }}/archives.html"><i class="fab fas-archive"></i> Archive</a>
-      {% endif %}
+      <a href="{{ SITEURL }}/{{ ARCHIVES_URL|d("archives.html") }}">Archive</a>
+      {%- if DISPLAY_PAGES_ON_MENU %}{% for p in pages -%}
+        <span style="padding: 0em 0.8em">|</span><a href="{{ SITEURL }}/{{ p.url }}" title="{{ p.title }}">{{p.title}}</a>
+      {%- endfor %}{% endif %}
       {% block header %}
       {% endblock header %}
       </p>

@@ -67,6 +67,7 @@
 
   </main>
     <footer>
+      {% if DISPLAY_LOGO %}
       <div class="author__logo">
           {% if USER_LOGO_URL %}
           <img src="{{ USER_LOGO_URL }}" alt="logo">
@@ -74,6 +75,7 @@
           <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
           {% endif %}
       </div>
+      {% endif %}
       <section class="author">
         <div class="author__name">
           <a href="{{ SITEURL }}/pages/about.html">{{ AUTHOR }}</a>

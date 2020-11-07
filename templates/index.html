@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<article>
+<article class="index">
   <div class="article__text">
   <dl>
     {% for article in articles_page.object_list %}
-    <dt>{{ article.locale_date }}</dt>
-    <dd class="article__title spaced_li"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+    <dd class="article__title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+    <dt class="spaced_li">{{ article.locale_date }}</dt>
+
     {#  <div class="article__text">
     {{ article.summary }}
     </div>#}

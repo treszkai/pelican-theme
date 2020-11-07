@@ -343,4 +343,17 @@ footer .ending-message {
   font-size: 10px;
 }
 
+.spaced_li {
+  margin-bottom: 1em;
+}
+
+.separator:before {
+  content: "|";
+  padding: 0em 0.8em;
+}
+
+.article__title {
+  line-height: 1.4em;
+}
+
 /*# sourceMappingURL=style.css.map */

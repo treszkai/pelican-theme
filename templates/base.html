@@ -51,7 +51,7 @@
       </div>
       <p>
       <a href="{{ SITEURL }}/index.html">Posts</a>{# to prevent extra whitespace
-      #}<span class="separator"></span><a href="{{ SITEURL }}/categories.html">Categories</a>
+      #}{#<span class="separator"></span><a href="{{ SITEURL }}/categories.html">Categories</a>#}
       {%- if DISPLAY_PAGES_ON_MENU %}{% for p in pages -%}
         <span class="separator"></span><a href="{{ SITEURL }}/{{ p.url }}" title="{{ p.title }}">{{p.title}}</a>
       {%- endfor %}{% endif %}
@@ -125,7 +125,7 @@
         </div>
       </section>
       <div class="ending-message">
-        <p>&copy; {{ AUTHOR }}. Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>, with <a href="https://github.com/laughk/pelican-hss" target="_blank">HSS</a> theme. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
+        <p>&copy; {{ AUTHOR }}. Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>, with theme based on <a href="https://github.com/laughk/pelican-hss" target="_blank">HSS</a> and <a href="https://tonsky.me">Tonsky’s</a>.</p>
       </div>
     </footer>
 </body>
